@@ -1,8 +1,10 @@
 package com.productMicroservice.service;
 
 import com.productMicroservice.DAO.ProductDao;
+import com.productMicroservice.DTO.InventoryDTO;
 import com.productMicroservice.DTO.ProductRequestDTO;
 import com.productMicroservice.DTO.ProductResponseDTO;
+import com.productMicroservice.clientConfigServices.ApiClient;
 import com.productMicroservice.exception.ProductResourceNotFoundException;
 import com.productMicroservice.exception.ProductServiceBusinessException;
 import com.productMicroservice.mapperUtil.ProductMapper;
@@ -11,6 +13,7 @@ import com.productMicroservice.serviceImpl.ProductInterface;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +25,8 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ProductService implements ProductInterface {
 
-    public ProductDao productDao;
+    private ProductDao productDao;
+    private ApiClient apiClient;
 
     @Override
     public ProductResponseDTO createNewProduct(ProductRequestDTO productRequestDTO) {
@@ -35,7 +39,7 @@ public class ProductService implements ProductInterface {
 
             Product saveProduct = productDao.save(product);
             productResponseDTO = ProductMapper.convertToDto(saveProduct);
-//            productResponseDTO.setProductSupplierCode(UUID.randomUUID().toString().split("-")[0]);
+
             log.debug("ProductService:createNewProduct received response from Database {}", ProductMapper.jsonAsString(productRequestDTO));
         } catch (Exception e) {
             log.error("Exception occurred while persisting new product to database , Exception message {}", e.getMessage());
@@ -77,6 +81,9 @@ public class ProductService implements ProductInterface {
                     .orElseThrow(() -> new ProductResourceNotFoundException("Product", "productId", productId));
             productResponseDTO = ProductMapper.convertToDto(product);
 
+            InventoryDTO inventoryDTO = apiClient.getInventoryByProductID(productId);
+            productResponseDTO.setInventory(inventoryDTO);
+            log.info("{} ", inventoryDTO);
             log.debug("ProductService:getProductById retrieving product from database for id {} {}", productId, ProductMapper.jsonAsString(productResponseDTO));
 
         } catch (Exception ex) {
@@ -96,8 +103,8 @@ public class ProductService implements ProductInterface {
             List<Product> product = productDao.findByName(productName);
 //                    .thr (() -> new ProductResourceNotFoundException("Product", "productId", productName));
             productResponseDTO = product.stream()
-                            .map(ProductMapper::convertToDto)
-                                    .collect(Collectors.toList());
+                    .map(ProductMapper::convertToDto)
+                    .collect(Collectors.toList());
 
             log.debug("ProductService:getProductByName retrieving product from database for id {} {}", productName, ProductMapper.jsonAsString(productResponseDTO));
 
@@ -132,7 +139,7 @@ public class ProductService implements ProductInterface {
             Product updatedProduct = productDao.save(existingProduct);
             productResponseDTO = ProductMapper.convertToDto(updatedProduct);
             log.debug("ProductService:updateProductInformation updating product from database for id {} {}", productId, ProductMapper.jsonAsString(productResponseDTO));
-        }catch (Exception e) {
+        } catch (Exception e) {
             log.error("Exception occurred while updating product {} from database , Exception message {}", productId, e.getMessage());
             throw new ProductServiceBusinessException("Exception occurred while update product from Database with id" + productId);
         }

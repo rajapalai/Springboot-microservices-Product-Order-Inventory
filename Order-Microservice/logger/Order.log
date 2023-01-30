@@ -3406,4 +3406,5 @@ Consider defining a bean of type 'com.orderMicroservice.config.ApiClient' in you
 ""2023-01-30 15:13:48 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ORDER-SERVICE/host.docker.internal:ORDER-SERVICE:9003 - registration status: 204
 ""2023-01-30 15:13:48 [restartedMain] INFO  c.o.OrderMicroserviceApplication - Started OrderMicroserviceApplication in 6.573 seconds (process running for 7.284)
 ""2023-01-30 15:13:55 [http-nio-9003-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2023-01-30 15:18:48 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
 "

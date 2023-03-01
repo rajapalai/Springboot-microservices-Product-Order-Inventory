@@ -127,7 +127,7 @@ class ProductMicroserviceApplicationTests {
     @Order(3)
     public void test_getProductById() throws Exception {
 
-        Product product = new Product("d3a3811b",
+        Product product = new Product("907c566c",
                 "Samsung",
                 "S20 Ultra",
                 BigDecimal.valueOf(110000),
@@ -135,16 +135,16 @@ class ProductMicroserviceApplicationTests {
                 "Salenet",
                 "cd1824e9");
 
-        Mockito.when(productDao.findById("d3a3811b")).thenReturn(Optional.ofNullable(product));
+        Mockito.when(productDao.findById("907c566c")).thenReturn(Optional.ofNullable(product));
         mockMvc.perform(MockMvcRequestBuilders
-                        .get(URL + "/id/{productId}", "d3a3811b")
+                        .get(URL + "/id/{productId}", "907c566c")
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("*").exists())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.result.productId").value("d3a3811b"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.result.productId").value("907c566c"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[*]", Matchers.hasSize(2)));
-        Mockito.verify(productDao, Mockito.times(1)).findById("d3a3811b");
+        Mockito.verify(productDao, Mockito.times(1)).findById("907c566c");
         Mockito.verifyNoMoreInteractions(productDao);
     }
 
@@ -197,7 +197,7 @@ class ProductMicroserviceApplicationTests {
                 "Mobiles & Tablets",
                 "iDestiny",
                 "cfd42e9c",
-                new InventoryDTO("f7db","d3a3811b",10,"in stock"));
+                new InventoryDTO("f7db","d3a3811b",10,true));
         Product productUpdate = new Product("d3a3811b",
                 "Apple iPhone",
                 "iPhone 14 pro max",

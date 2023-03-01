@@ -1,297 +1,522 @@
-"2023-01-30 13:16:19 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 13548 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Inventory-Microservice)
-""2023-01-30 13:16:19 INFO  - No active profile set, falling back to 1 default profile: "default"
-""2023-01-30 13:16:19 INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-""2023-01-30 13:16:19 INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-""2023-01-30 13:16:20 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-""2023-01-30 13:16:20 INFO  - Finished Spring Data repository scanning in 159 ms. Found 1 MongoDB repository interfaces.
-""2023-01-30 13:16:21 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
-""2023-01-30 13:16:21 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-""2023-01-30 13:16:21 INFO  - Tomcat initialized with port(s): 9001 (http)
-""2023-01-30 13:16:21 INFO  - Starting service [Tomcat]
-""2023-01-30 13:16:21 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
-""2023-01-30 13:16:21 INFO  - Initializing Spring embedded WebApplicationContext
-""2023-01-30 13:16:21 INFO  - Root WebApplicationContext: initialization completed in 2426 ms
-""2023-01-30 13:16:22 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@30ada476]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-""2023-01-30 13:16:22 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=25669800}
-""2023-01-30 13:16:22 WARN  - Unable to start LiveReload server
-""2023-01-30 13:16:23 INFO  - Eureka HTTP Client uses RestTemplate.
-""2023-01-30 13:16:23 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-""2023-01-30 13:16:23 INFO  - Setting initial instance status as: STARTING
-""2023-01-30 13:16:23 INFO  - Initializing Eureka in region us-east-1
-""2023-01-30 13:16:23 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:16:23 INFO  - Disable delta property : false
-""2023-01-30 13:16:23 INFO  - Single vip registry refresh property : null
-""2023-01-30 13:16:23 INFO  - Force full registry fetch : false
-""2023-01-30 13:16:23 INFO  - Application is null : false
-""2023-01-30 13:16:23 INFO  - Registered Applications size is zero : true
-""2023-01-30 13:16:23 INFO  - Application version is -1: true
-""2023-01-30 13:16:23 INFO  - Getting all instance registry info from the eureka server
-""2023-01-30 13:16:24 INFO  - The response status is 200
-""2023-01-30 13:16:24 INFO  - Starting heartbeat executor: renew interval is: 30
-""2023-01-30 13:16:24 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
-""2023-01-30 13:16:24 INFO  - Discovery Client initialized at timestamp 1675064784191 with initial instances count: 1
-""2023-01-30 13:16:24 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
-""2023-01-30 13:16:24 INFO  - Saw local status change event StatusChangeEvent [timestamp=1675064784200, current=UP, previous=STARTING]
-""2023-01-30 13:16:24 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001: registering service...
-""2023-01-30 13:16:24 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - registration status: 204
-""2023-01-30 13:16:24 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
-""2023-01-30 13:16:24 INFO  - Updating port to 9001
-""2023-01-30 13:16:24 INFO  - Started ProductMicroserviceApplication in 5.858 seconds (process running for 6.601)
-""2023-01-30 13:16:28 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-""2023-01-30 13:16:28 INFO  - ProductService:createNewProduct execution started.
-""2023-01-30 13:16:29 INFO  - ProductService:createNewProduct execution ended.
-""2023-01-30 13:16:29 INFO  - ProductController::addNewProduct execution started.
-""2023-01-30 13:16:29 INFO  - ProductController::addNewProduct request body {"productName":"HTC","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny"}
-""2023-01-30 13:16:29 INFO  - ProductController::addNewProduct execution ended.
-""2023-01-30 13:17:25 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:17:25 INFO  - InventoryDTO(inventoryId=24cc, productId=d3a3811b, quantity=10, isInStock=null) 
-""2023-01-30 13:17:25 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:17:25 INFO  - ProductController::getProduct by id  d3a3811b
-""2023-01-30 13:17:25 INFO  - ProductController::getProduct by id  d3a3811b response {"productId":"d3a3811b","productName":"Apple","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"13682421","inventory":{"inventoryId":"24cc","productId":"d3a3811b","quantity":10,"isInStock":null}}
-""2023-01-30 13:17:25 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:21:23 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:23:14 INFO  - ProductService:createNewProduct execution started.
-""2023-01-30 13:23:14 INFO  - ProductService:createNewProduct execution ended.
-""2023-01-30 13:23:14 INFO  - ProductController::addNewProduct execution started.
-""2023-01-30 13:23:14 INFO  - ProductController::addNewProduct request body {"productName":"HTC","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny"}
-""2023-01-30 13:23:14 INFO  - ProductController::addNewProduct execution ended.
-""2023-01-30 13:26:03 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:26:03 INFO  - InventoryDTO(inventoryId=24cc, productId=d3a3811b, quantity=10, isInStock=null) 
-""2023-01-30 13:26:03 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:26:03 INFO  - ProductController::getProduct by id  d3a3811b
-""2023-01-30 13:26:03 INFO  - ProductController::getProduct by id  d3a3811b response {"productId":"d3a3811b","productName":"Apple","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"13682421","inventory":{"inventoryId":"24cc","productId":"d3a3811b","quantity":10,"isInStock":null}}
-""2023-01-30 13:26:03 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:26:15 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:26:15 INFO  - InventoryDTO(inventoryId=24cc, productId=d3a3811b, quantity=10, isInStock=null) 
-""2023-01-30 13:26:15 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:26:15 INFO  - ProductController::getProduct by id  d3a3811b
-""2023-01-30 13:26:15 INFO  - ProductController::getProduct by id  d3a3811b response {"productId":"d3a3811b","productName":"Apple","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"13682421","inventory":{"inventoryId":"24cc","productId":"d3a3811b","quantity":10,"isInStock":null}}
-""2023-01-30 13:26:15 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:26:17 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:26:17 INFO  - InventoryDTO(inventoryId=24cc, productId=d3a3811b, quantity=10, isInStock=null) 
-""2023-01-30 13:26:17 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:26:17 INFO  - ProductController::getProduct by id  d3a3811b
-""2023-01-30 13:26:17 INFO  - ProductController::getProduct by id  d3a3811b response {"productId":"d3a3811b","productName":"Apple","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"13682421","inventory":{"inventoryId":"24cc","productId":"d3a3811b","quantity":10,"isInStock":null}}
-""2023-01-30 13:26:17 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:26:23 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:26:54 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:26:54 INFO  - InventoryDTO(inventoryId=24cc, productId=d3a3811b, quantity=10, isInStock=null) 
-""2023-01-30 13:26:54 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:26:54 INFO  - ProductController::getProduct by id  d3a3811b
-""2023-01-30 13:26:54 INFO  - ProductController::getProduct by id  d3a3811b response {"productId":"d3a3811b","productName":"Apple","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"13682421","inventory":{"inventoryId":"24cc","productId":"d3a3811b","quantity":10,"isInStock":null}}
-""2023-01-30 13:26:54 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:26:58 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:26:58 INFO  - InventoryDTO(inventoryId=5b73, productId=f62f27e8, quantity=10, isInStock=null) 
-""2023-01-30 13:26:58 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:26:58 INFO  - ProductController::getProduct by id  f62f27e8
-""2023-01-30 13:26:58 INFO  - ProductController::getProduct by id  f62f27e8 response {"productId":"f62f27e8","productName":"HTC","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"1ba643ac","inventory":{"inventoryId":"5b73","productId":"f62f27e8","quantity":10,"isInStock":null}}
-""2023-01-30 13:26:58 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:28:11 INFO  - ProductService:createNewProduct execution started.
-""2023-01-30 13:28:11 INFO  - ProductService:createNewProduct execution ended.
-""2023-01-30 13:28:11 INFO  - ProductController::addNewProduct execution started.
-""2023-01-30 13:28:11 INFO  - ProductController::addNewProduct request body {"productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny"}
-""2023-01-30 13:28:11 INFO  - ProductController::addNewProduct execution ended.
-""2023-01-30 13:28:41 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:28:41 INFO  - InventoryDTO(inventoryId=6aed, productId=6fbdadde, quantity=10, isInStock=null) 
-""2023-01-30 13:28:41 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:28:41 INFO  - ProductController::getProduct by id  6fbdadde
-""2023-01-30 13:28:41 INFO  - ProductController::getProduct by id  6fbdadde response {"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24","inventory":{"inventoryId":"6aed","productId":"6fbdadde","quantity":10,"isInStock":null}}
-""2023-01-30 13:28:41 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:31:23 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:34:59 INFO  - Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-""2023-01-30 13:34:59 INFO  - Saw local status change event StatusChangeEvent [timestamp=1675065899060, current=DOWN, previous=UP]
-""2023-01-30 13:34:59 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001: registering service...
-""2023-01-30 13:34:59 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - registration status: 204
-""2023-01-30 13:34:59 INFO  - Shutting down DiscoveryClient ...
-""2023-01-30 13:35:02 INFO  - Unregistering ...
-""2023-01-30 13:35:02 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - deregister  status: 200
-""2023-01-30 13:35:02 INFO  - Completed shut down of DiscoveryClient
-""2023-01-30 13:35:08 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 14348 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Inventory-Microservice)
-""2023-01-30 13:35:08 INFO  - No active profile set, falling back to 1 default profile: "default"
-""2023-01-30 13:35:08 INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-""2023-01-30 13:35:08 INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-""2023-01-30 13:35:09 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-""2023-01-30 13:35:09 INFO  - Finished Spring Data repository scanning in 175 ms. Found 1 MongoDB repository interfaces.
-""2023-01-30 13:35:09 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
-""2023-01-30 13:35:09 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-""2023-01-30 13:35:10 INFO  - Tomcat initialized with port(s): 9001 (http)
-""2023-01-30 13:35:10 INFO  - Starting service [Tomcat]
-""2023-01-30 13:35:10 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
-""2023-01-30 13:35:11 INFO  - Initializing Spring embedded WebApplicationContext
-""2023-01-30 13:35:11 INFO  - Root WebApplicationContext: initialization completed in 2824 ms
-""2023-01-30 13:35:11 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@bff219c]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-""2023-01-30 13:35:11 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=40874601}
-""2023-01-30 13:35:11 WARN  - Unable to start LiveReload server
-""2023-01-30 13:35:13 INFO  - Eureka HTTP Client uses RestTemplate.
-""2023-01-30 13:35:13 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-""2023-01-30 13:35:13 INFO  - Setting initial instance status as: STARTING
-""2023-01-30 13:35:13 INFO  - Initializing Eureka in region us-east-1
-""2023-01-30 13:35:13 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:35:13 INFO  - Disable delta property : false
-""2023-01-30 13:35:13 INFO  - Single vip registry refresh property : null
-""2023-01-30 13:35:13 INFO  - Force full registry fetch : false
-""2023-01-30 13:35:13 INFO  - Application is null : false
-""2023-01-30 13:35:13 INFO  - Registered Applications size is zero : true
-""2023-01-30 13:35:13 INFO  - Application version is -1: true
-""2023-01-30 13:35:13 INFO  - Getting all instance registry info from the eureka server
-""2023-01-30 13:35:13 INFO  - The response status is 200
-""2023-01-30 13:35:13 INFO  - Starting heartbeat executor: renew interval is: 30
-""2023-01-30 13:35:13 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
-""2023-01-30 13:35:13 INFO  - Discovery Client initialized at timestamp 1675065913778 with initial instances count: 3
-""2023-01-30 13:35:13 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
-""2023-01-30 13:35:13 INFO  - Saw local status change event StatusChangeEvent [timestamp=1675065913784, current=UP, previous=STARTING]
-""2023-01-30 13:35:13 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001: registering service...
-""2023-01-30 13:35:13 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
-""2023-01-30 13:35:13 INFO  - Updating port to 9001
-""2023-01-30 13:35:13 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - registration status: 204
-""2023-01-30 13:35:13 INFO  - Started ProductMicroserviceApplication in 6.526 seconds (process running for 7.201)
-""2023-01-30 13:35:30 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-""2023-01-30 13:35:30 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:35:30 INFO  - InventoryDTO(inventoryId=6aed, productId=6fbdadde, quantity=10, isInStock=true) 
-""2023-01-30 13:35:30 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:35:30 INFO  - ProductController::getProduct by id  6fbdadde
-""2023-01-30 13:35:30 INFO  - ProductController::getProduct by id  6fbdadde response {"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24","inventory":{"inventoryId":"6aed","productId":"6fbdadde","quantity":10,"inStock":true}}
-""2023-01-30 13:35:30 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:40:13 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:45:13 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:50:13 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:50:33 INFO  - Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-""2023-01-30 13:50:33 INFO  - Saw local status change event StatusChangeEvent [timestamp=1675066833992, current=DOWN, previous=UP]
-""2023-01-30 13:50:33 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001: registering service...
-""2023-01-30 13:50:33 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - registration status: 204
-""2023-01-30 13:50:34 INFO  - Shutting down DiscoveryClient ...
-""2023-01-30 13:50:37 INFO  - Unregistering ...
-""2023-01-30 13:50:37 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - deregister  status: 200
-""2023-01-30 13:50:37 INFO  - Completed shut down of DiscoveryClient
-""2023-01-30 13:50:40 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 20324 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Inventory-Microservice)
-""2023-01-30 13:50:40 INFO  - No active profile set, falling back to 1 default profile: "default"
-""2023-01-30 13:50:40 INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-""2023-01-30 13:50:40 INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-""2023-01-30 13:50:41 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-""2023-01-30 13:50:42 INFO  - Finished Spring Data repository scanning in 155 ms. Found 1 MongoDB repository interfaces.
-""2023-01-30 13:50:42 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
-""2023-01-30 13:50:42 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-""2023-01-30 13:50:43 INFO  - Tomcat initialized with port(s): 9001 (http)
-""2023-01-30 13:50:43 INFO  - Starting service [Tomcat]
-""2023-01-30 13:50:43 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
-""2023-01-30 13:50:43 INFO  - Initializing Spring embedded WebApplicationContext
-""2023-01-30 13:50:43 INFO  - Root WebApplicationContext: initialization completed in 2288 ms
-""2023-01-30 13:50:43 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@d509558]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-""2023-01-30 13:50:43 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=30141701}
-""2023-01-30 13:50:43 WARN  - Unable to start LiveReload server
-""2023-01-30 13:50:44 INFO  - Eureka HTTP Client uses RestTemplate.
-""2023-01-30 13:50:45 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-""2023-01-30 13:50:45 INFO  - Setting initial instance status as: STARTING
-""2023-01-30 13:50:45 INFO  - Initializing Eureka in region us-east-1
-""2023-01-30 13:50:45 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:50:45 INFO  - Disable delta property : false
-""2023-01-30 13:50:45 INFO  - Single vip registry refresh property : null
-""2023-01-30 13:50:45 INFO  - Force full registry fetch : false
-""2023-01-30 13:50:45 INFO  - Application is null : false
-""2023-01-30 13:50:45 INFO  - Registered Applications size is zero : true
-""2023-01-30 13:50:45 INFO  - Application version is -1: true
-""2023-01-30 13:50:45 INFO  - Getting all instance registry info from the eureka server
-""2023-01-30 13:50:45 INFO  - The response status is 200
-""2023-01-30 13:50:45 INFO  - Starting heartbeat executor: renew interval is: 30
-""2023-01-30 13:50:45 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
-""2023-01-30 13:50:45 INFO  - Discovery Client initialized at timestamp 1675066845674 with initial instances count: 3
-""2023-01-30 13:50:45 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
-""2023-01-30 13:50:45 INFO  - Saw local status change event StatusChangeEvent [timestamp=1675066845678, current=UP, previous=STARTING]
-""2023-01-30 13:50:45 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001: registering service...
-""2023-01-30 13:50:45 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
-""2023-01-30 13:50:45 INFO  - Updating port to 9001
-""2023-01-30 13:50:45 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - registration status: 204
-""2023-01-30 13:50:45 INFO  - Started ProductMicroserviceApplication in 5.7 seconds (process running for 6.344)
-""2023-01-30 13:51:47 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-""2023-01-30 13:51:47 INFO  - ProductService:getListOfProducts execution started.
-""2023-01-30 13:51:47 INFO  - ProductController::getProducts execution started.
-""2023-01-30 13:51:47 INFO  - ProductController::getProducts response {"statusCode":"Success","result":[{"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24"}]}
-""2023-01-30 13:51:47 INFO  - ProductController::getProducts execution ended.
-""2023-01-30 13:54:14 INFO  - ProductService:getProductById execution started.
-""2023-01-30 13:54:14 INFO  - InventoryDTO(inventoryId=6aed, productId=6fbdadde, quantity=10, isInStock=true) 
-""2023-01-30 13:54:14 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 13:54:14 INFO  - ProductController::getProduct by id  6fbdadde
-""2023-01-30 13:54:14 INFO  - ProductController::getProduct by id  6fbdadde response {"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24","inventory":{"inventoryId":"6aed","productId":"6fbdadde","quantity":10,"inStock":true}}
-""2023-01-30 13:54:14 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 13:55:45 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 13:59:15 INFO  - ProductService:getListOfProducts execution started.
-""2023-01-30 13:59:15 INFO  - ProductController::getProducts execution started.
-""2023-01-30 13:59:15 INFO  - ProductController::getProducts response {"statusCode":"Success","result":[{"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24"}]}
-""2023-01-30 13:59:15 INFO  - ProductController::getProducts execution ended.
-""2023-01-30 14:00:45 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:05:45 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:10:45 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:15:45 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:16:00 INFO  - ProductService:getProductById execution started.
-""2023-01-30 14:16:00 INFO  - InventoryDTO(inventoryId=6aed, productId=6fbdadde, quantity=10, isInStock=true) 
-""2023-01-30 14:16:00 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 14:16:00 INFO  - ProductController::getProduct by id  6fbdadde
-""2023-01-30 14:16:00 INFO  - ProductController::getProduct by id  6fbdadde response {"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24","inventory":{"inventoryId":"6aed","productId":"6fbdadde","quantity":10,"inStock":true}}
-""2023-01-30 14:16:00 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 14:20:45 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:21:17 INFO  - Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-""2023-01-30 14:21:17 INFO  - Saw local status change event StatusChangeEvent [timestamp=1675068677863, current=DOWN, previous=UP]
-""2023-01-30 14:21:17 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001: registering service...
-""2023-01-30 14:21:17 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - registration status: 204
-""2023-01-30 14:21:17 INFO  - Shutting down DiscoveryClient ...
-""2023-01-30 14:21:20 INFO  - Unregistering ...
-""2023-01-30 14:21:20 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - deregister  status: 200
-""2023-01-30 14:21:20 INFO  - Completed shut down of DiscoveryClient
-""2023-01-30 14:21:27 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 4280 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Inventory-Microservice)
-""2023-01-30 14:21:27 INFO  - No active profile set, falling back to 1 default profile: "default"
-""2023-01-30 14:21:27 INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-""2023-01-30 14:21:27 INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-""2023-01-30 14:21:28 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-""2023-01-30 14:21:28 INFO  - Finished Spring Data repository scanning in 162 ms. Found 1 MongoDB repository interfaces.
-""2023-01-30 14:21:28 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
-""2023-01-30 14:21:28 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-""2023-01-30 14:21:29 INFO  - Tomcat initialized with port(s): 9001 (http)
-""2023-01-30 14:21:29 INFO  - Starting service [Tomcat]
-""2023-01-30 14:21:29 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
-""2023-01-30 14:21:29 INFO  - Initializing Spring embedded WebApplicationContext
-""2023-01-30 14:21:29 INFO  - Root WebApplicationContext: initialization completed in 2669 ms
-""2023-01-30 14:21:30 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@2431af3]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
-""2023-01-30 14:21:30 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24147000}
-""2023-01-30 14:21:30 WARN  - Unable to start LiveReload server
-""2023-01-30 14:21:31 INFO  - Eureka HTTP Client uses RestTemplate.
-""2023-01-30 14:21:31 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-""2023-01-30 14:21:31 INFO  - Setting initial instance status as: STARTING
-""2023-01-30 14:21:31 INFO  - Initializing Eureka in region us-east-1
-""2023-01-30 14:21:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:21:31 INFO  - Disable delta property : false
-""2023-01-30 14:21:31 INFO  - Single vip registry refresh property : null
-""2023-01-30 14:21:31 INFO  - Force full registry fetch : false
-""2023-01-30 14:21:31 INFO  - Application is null : false
-""2023-01-30 14:21:31 INFO  - Registered Applications size is zero : true
-""2023-01-30 14:21:31 INFO  - Application version is -1: true
-""2023-01-30 14:21:31 INFO  - Getting all instance registry info from the eureka server
-""2023-01-30 14:21:32 INFO  - The response status is 200
-""2023-01-30 14:21:32 INFO  - Starting heartbeat executor: renew interval is: 30
-""2023-01-30 14:21:32 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
-""2023-01-30 14:21:32 INFO  - Discovery Client initialized at timestamp 1675068692175 with initial instances count: 2
-""2023-01-30 14:21:32 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
-""2023-01-30 14:21:32 INFO  - Saw local status change event StatusChangeEvent [timestamp=1675068692179, current=UP, previous=STARTING]
-""2023-01-30 14:21:32 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001: registering service...
-""2023-01-30 14:21:32 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
-""2023-01-30 14:21:32 INFO  - Updating port to 9001
-""2023-01-30 14:21:32 INFO  - DiscoveryClient_PRODUCT-SERVICE/host.docker.internal:PRODUCT-SERVICE:9001 - registration status: 204
-""2023-01-30 14:21:32 INFO  - Started ProductMicroserviceApplication in 5.98 seconds (process running for 6.61)
-""2023-01-30 14:22:23 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-""2023-01-30 14:22:23 INFO  - ProductController::getProduct by id  6fbdadde
-""2023-01-30 14:22:23 INFO  - ProductService:getProductById execution started.
-""2023-01-30 14:22:23 INFO  - InventoryDTO(inventoryId=6aed, productId=6fbdadde, quantity=10, isInStock=true) 
-""2023-01-30 14:22:23 INFO  - ProductService:getProductById execution ended.
-""2023-01-30 14:22:23 INFO  - ProductController::getProduct by id  6fbdadde response {"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24","inventory":{"inventoryId":"6aed","productId":"6fbdadde","quantity":10,"inStock":true}}
-""2023-01-30 14:22:23 INFO  - ProductController::getProduct by id execution ended.
-""2023-01-30 14:26:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:31:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:36:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:41:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:46:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:51:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 14:56:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 15:01:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 15:06:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 15:11:31 INFO  - Resolving eureka endpoints via configuration
-""2023-01-30 15:16:31 INFO  - Resolving eureka endpoints via configuration
+"2023-03-01 12:50:22 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 12776 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Service-Registry-Eureka)
+""2023-03-01 12:50:22 INFO  - No active profile set, falling back to 1 default profile: "default"
+""2023-03-01 12:50:22 INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2023-03-01 12:50:22 INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2023-03-01 12:50:24 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2023-03-01 12:50:24 INFO  - Finished Spring Data repository scanning in 211 ms. Found 1 MongoDB repository interfaces.
+""2023-03-01 12:50:24 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
+""2023-03-01 12:50:24 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-03-01 12:50:25 INFO  - Tomcat initialized with port(s): 9001 (http)
+""2023-03-01 12:50:25 INFO  - Starting service [Tomcat]
+""2023-03-01 12:50:25 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
+""2023-03-01 12:50:26 INFO  - Initializing Spring embedded WebApplicationContext
+""2023-03-01 12:50:26 INFO  - Root WebApplicationContext: initialization completed in 3567 ms
+""2023-03-01 12:50:26 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@43250381]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+""2023-03-01 12:50:26 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=35895400}
+""2023-03-01 12:50:26 INFO  - LiveReload server is running on port 35729
+""2023-03-01 12:50:29 INFO  - Eureka HTTP Client uses RestTemplate.
+""2023-03-01 12:50:29 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+""2023-03-01 12:50:29 INFO  - Setting initial instance status as: STARTING
+""2023-03-01 12:50:29 INFO  - Initializing Eureka in region us-east-1
+""2023-03-01 12:50:29 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 12:50:29 INFO  - Disable delta property : false
+""2023-03-01 12:50:29 INFO  - Single vip registry refresh property : null
+""2023-03-01 12:50:29 INFO  - Force full registry fetch : false
+""2023-03-01 12:50:29 INFO  - Application is null : false
+""2023-03-01 12:50:29 INFO  - Registered Applications size is zero : true
+""2023-03-01 12:50:29 INFO  - Application version is -1: true
+""2023-03-01 12:50:29 INFO  - Getting all instance registry info from the eureka server
+""2023-03-01 12:50:30 INFO  - The response status is 200
+""2023-03-01 12:50:30 INFO  - Starting heartbeat executor: renew interval is: 30
+""2023-03-01 12:50:30 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2023-03-01 12:50:30 INFO  - Discovery Client initialized at timestamp 1677655230438 with initial instances count: 0
+""2023-03-01 12:50:30 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
+""2023-03-01 12:50:30 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677655230442, current=UP, previous=STARTING]
+""2023-03-01 12:50:30 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 12:50:30 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
+""2023-03-01 12:50:30 INFO  - Updating port to 9001
+""2023-03-01 12:50:30 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 12:50:30 INFO  - Started ProductMicroserviceApplication in 9.098 seconds (process running for 10.233)
+""2023-03-01 12:50:50 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2023-03-01 12:50:50 INFO  - ProductService:getListOfProducts execution started.
+""2023-03-01 12:50:50 INFO  - ProductController::getProducts execution started.
+""2023-03-01 12:50:50 INFO  - ProductController::getProducts response {"statusCode":"Success","result":[{"productId":"6fbdadde","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"37106c24"},{"productId":"19150c37","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"67a071b4"},{"productId":"1c1ebdb8","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"eb3cf3c3"},{"productId":"7b60bb22","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"5f6d5ffc"},{"productId":"907c566c","productName":"Apple Iphone","productDescription":"APPLE iPhone 13 (Blue, 128 GB)","productAmount":61999,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"d55908e9"}]}
+""2023-03-01 12:50:50 INFO  - ProductController::getProducts execution ended.
+""2023-03-01 12:51:00 INFO  - Disable delta property : false
+""2023-03-01 12:51:00 INFO  - Single vip registry refresh property : null
+""2023-03-01 12:51:00 INFO  - Force full registry fetch : false
+""2023-03-01 12:51:00 INFO  - Application is null : false
+""2023-03-01 12:51:00 INFO  - Registered Applications size is zero : true
+""2023-03-01 12:51:00 INFO  - Application version is -1: false
+""2023-03-01 12:51:00 INFO  - Getting all instance registry info from the eureka server
+""2023-03-01 12:51:00 INFO  - The response status is 200
+""2023-03-01 12:52:33 INFO  - ProductService:createNewProduct execution started.
+""2023-03-01 12:52:34 INFO  - ProductService:createNewProduct execution ended.
+""2023-03-01 12:52:34 INFO  - ProductController::addNewProduct execution started.
+""2023-03-01 12:52:34 INFO  - ProductController::addNewProduct request body {"productName":"Voltas","productDescription":"voltas AC 5 star","productAmount":40000,"productType":"Electronics","productSupplierName":"Shyam electronics"}
+""2023-03-01 12:52:34 INFO  - ProductController::addNewProduct execution ended.
+""2023-03-01 12:53:17 INFO  - ProductService:getProductById execution started.
+""2023-03-01 12:53:17 INFO  - InventoryDTO(inventoryId=7c54, productId=9407141d, quantity=100, isInStock=true) 
+""2023-03-01 12:53:17 INFO  - ProductService:getProductById execution ended.
+""2023-03-01 12:53:17 INFO  - ProductController::getProduct by id  9407141d
+""2023-03-01 12:53:17 INFO  - ProductController::getProduct by id  9407141d response {"productId":"9407141d","productName":"Voltas","productDescription":"voltas AC 5 star","productAmount":40000,"productType":"Electronics","productSupplierName":"Shyam electronics","productSupplierCode":"bf7564e9","inventory":{"inventoryId":"7c54","productId":"9407141d","quantity":100,"inStock":true}}
+""2023-03-01 12:53:17 INFO  - ProductController::getProduct by id execution ended.
+""2023-03-01 12:55:27 INFO  - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+""2023-03-01 12:55:27 INFO  - Unregistering application PRODUCT-SERVICE with eureka with status DOWN
+""2023-03-01 12:55:27 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677655527220, current=DOWN, previous=UP]
+""2023-03-01 12:55:27 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 12:55:27 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 12:55:27 INFO  - Stopping service [Tomcat]
+""2023-03-01 12:55:27 INFO  - Destroying Spring FrameworkServlet 'dispatcherServlet'
+""2023-03-01 12:55:27 INFO  - Shutting down DiscoveryClient ...
+""2023-03-01 12:55:30 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 12:55:30 INFO  - Unregistering ...
+""2023-03-01 12:55:30 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - deregister  status: 200
+""2023-03-01 12:55:30 INFO  - Completed shut down of DiscoveryClient
+""2023-03-01 12:55:30 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 12776 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Service-Registry-Eureka)
+""2023-03-01 12:55:30 INFO  - No active profile set, falling back to 1 default profile: "default"
+""2023-03-01 12:55:31 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2023-03-01 12:55:31 INFO  - Finished Spring Data repository scanning in 14 ms. Found 1 MongoDB repository interfaces.
+""2023-03-01 12:55:31 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
+""2023-03-01 12:55:31 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-03-01 12:55:31 INFO  - Tomcat initialized with port(s): 9001 (http)
+""2023-03-01 12:55:31 INFO  - Starting service [Tomcat]
+""2023-03-01 12:55:31 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
+""2023-03-01 12:55:31 INFO  - Initializing Spring embedded WebApplicationContext
+""2023-03-01 12:55:31 INFO  - Root WebApplicationContext: initialization completed in 584 ms
+""2023-03-01 12:55:31 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@43250381]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+""2023-03-01 12:55:31 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6905900}
+""2023-03-01 12:55:31 INFO  - LiveReload server is running on port 35729
+""2023-03-01 12:55:32 INFO  - Eureka HTTP Client uses RestTemplate.
+""2023-03-01 12:55:32 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+""2023-03-01 12:55:32 INFO  - Setting initial instance status as: STARTING
+""2023-03-01 12:55:32 INFO  - Initializing Eureka in region us-east-1
+""2023-03-01 12:55:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 12:55:32 INFO  - Disable delta property : false
+""2023-03-01 12:55:32 INFO  - Single vip registry refresh property : null
+""2023-03-01 12:55:32 INFO  - Force full registry fetch : false
+""2023-03-01 12:55:32 INFO  - Application is null : false
+""2023-03-01 12:55:32 INFO  - Registered Applications size is zero : true
+""2023-03-01 12:55:32 INFO  - Application version is -1: true
+""2023-03-01 12:55:32 INFO  - Getting all instance registry info from the eureka server
+""2023-03-01 12:55:32 INFO  - The response status is 200
+""2023-03-01 12:55:32 INFO  - Starting heartbeat executor: renew interval is: 30
+""2023-03-01 12:55:32 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2023-03-01 12:55:32 INFO  - Discovery Client initialized at timestamp 1677655532328 with initial instances count: 2
+""2023-03-01 12:55:32 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
+""2023-03-01 12:55:32 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677655532329, current=UP, previous=STARTING]
+""2023-03-01 12:55:32 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 12:55:32 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 12:55:32 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
+""2023-03-01 12:55:32 INFO  - Updating port to 9001
+""2023-03-01 12:55:32 INFO  - Started ProductMicroserviceApplication in 2.106 seconds (process running for 311.944)
+""2023-03-01 12:55:32 INFO  - Condition evaluation unchanged
+""2023-03-01 13:00:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:05:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:10:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:15:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:20:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:25:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:28:48 INFO  - Starting ProductMicroserviceApplicationTests using Java 19.0.1 with PID 23336 (started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Product-Microservice)
+""2023-03-01 13:28:48 INFO  - No active profile set, falling back to 1 default profile: "default"
+""2023-03-01 13:28:49 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2023-03-01 13:28:50 INFO  - Finished Spring Data repository scanning in 116 ms. Found 1 MongoDB repository interfaces.
+""2023-03-01 13:28:50 INFO  - BeanFactory id=aa55eedb-e254-3801-9dae-8f3aa1d20b2d
+""2023-03-01 13:28:51 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-03-01 13:28:52 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@414d2821]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+""2023-03-01 13:28:52 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=36337600}
+""2023-03-01 13:28:52 INFO  - Initializing Spring TestDispatcherServlet ''
+""2023-03-01 13:28:52 INFO  - Initializing Servlet ''
+""2023-03-01 13:28:52 INFO  - Completed initialization in 2 ms
+""2023-03-01 13:28:52 INFO  - Eureka HTTP Client uses RestTemplate.
+""2023-03-01 13:28:53 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+""2023-03-01 13:28:53 INFO  - Setting initial instance status as: STARTING
+""2023-03-01 13:28:53 INFO  - Initializing Eureka in region us-east-1
+""2023-03-01 13:28:53 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:28:53 INFO  - Disable delta property : false
+""2023-03-01 13:28:53 INFO  - Single vip registry refresh property : null
+""2023-03-01 13:28:53 INFO  - Force full registry fetch : false
+""2023-03-01 13:28:53 INFO  - Application is null : false
+""2023-03-01 13:28:53 INFO  - Registered Applications size is zero : true
+""2023-03-01 13:28:53 INFO  - Application version is -1: true
+""2023-03-01 13:28:53 INFO  - Getting all instance registry info from the eureka server
+""2023-03-01 13:28:53 INFO  - The response status is 200
+""2023-03-01 13:28:53 INFO  - Starting heartbeat executor: renew interval is: 30
+""2023-03-01 13:28:53 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2023-03-01 13:28:53 INFO  - Discovery Client initialized at timestamp 1677657533991 with initial instances count: 2
+""2023-03-01 13:28:53 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
+""2023-03-01 13:28:53 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677657533995, current=UP, previous=STARTING]
+""2023-03-01 13:28:53 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 13:28:54 INFO  - Started ProductMicroserviceApplicationTests in 5.783 seconds (process running for 7.114)
+""2023-03-01 13:28:54 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 13:28:54 INFO  - ProductService:createNewProduct execution started.
+""2023-03-01 13:28:54 INFO  - ProductService:createNewProduct execution ended.
+""2023-03-01 13:28:54 INFO  - ProductController::addNewProduct execution started.
+""2023-03-01 13:28:54 INFO  - ProductController::addNewProduct request body {"productName":"Samsung","productDescription":"S20 Ultra","productAmount":110000,"productType":"Mobiles & Tablets","productSupplierName":"Salenet"}
+""2023-03-01 13:28:54 INFO  - ProductController::addNewProduct execution ended.
+""2023-03-01 13:28:54 INFO  - ProductService:getListOfProducts execution started.
+""2023-03-01 13:28:54 INFO  - ProductController::getProducts execution started.
+""2023-03-01 13:28:54 INFO  - ProductController::getProducts response {"statusCode":"Success","result":[{"productId":"63c8c5de2461106d9019da33","productName":"Samsung","productDescription":"S20 Ultra","productAmount":110000,"productType":"Mobiles & Tablets","productSupplierName":"Salenet","productSupplierCode":"cd1824e9"},{"productId":"63c8dd390040ee0d6bbf5777","productName":"Hawkins","productDescription":"Hawkins Contura Black 3 L Pressure Cooker  (Hard Anodized)","productAmount":5000,"productType":"Home & Furniture","productSupplierName":"MYTHANGLORYRetail","productSupplierCode":"bd1cabb2"}]}
+""2023-03-01 13:28:54 INFO  - ProductController::getProducts execution ended.
+""2023-03-01 13:28:54 INFO  - ProductService:getProductById execution started.
+""2023-03-01 13:28:54 INFO  - InventoryDTO(inventoryId=865f, productId=907c566c, quantity=10, isInStock=true) 
+""2023-03-01 13:28:54 INFO  - ProductService:getProductById execution ended.
+""2023-03-01 13:28:54 INFO  - ProductController::getProduct by id  907c566c
+""2023-03-01 13:28:54 INFO  - ProductController::getProduct by id  907c566c response {"productId":"907c566c","productName":"Samsung","productDescription":"S20 Ultra","productAmount":110000,"productType":"Mobiles & Tablets","productSupplierName":"Salenet","productSupplierCode":"cd1824e9","inventory":{"inventoryId":"865f","productId":"907c566c","quantity":10,"inStock":true}}
+""2023-03-01 13:28:54 INFO  - ProductController::getProduct by id execution ended.
+""2023-03-01 13:28:54 INFO  - ProductService:getProductByName execution started.
+""2023-03-01 13:28:54 INFO  - ProductService:getProductByName execution ended.
+""2023-03-01 13:28:54 INFO  - ProductController::getProduct by id  Apple iPhone
+""2023-03-01 13:28:54 INFO  - ProductController::getProduct by id  Apple iPhone response [{"productId":"63c8c4a72461106d9019da30","productName":"Apple iPhone","productDescription":"iPhone 13 pro max","productAmount":180000,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"70f0bdfb"},{"productId":"63c8c4bb2461106d9019da31","productName":"Apple iPhone","productDescription":"iPhone 14 pro max","productAmount":130000,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"cfd42e9c"}]
+""2023-03-01 13:28:54 INFO  - ProductController::getProduct by id execution ended.
+""2023-03-01 13:28:54 INFO  - ProductController::updateProductById execution started.
+""2023-03-01 13:28:54 INFO  - ProductService:updateProductInformation execution started.
+""2023-03-01 13:28:54 INFO  - ProductService:updateProductInformation execution ended.
+""2023-03-01 13:28:54 INFO  - ProductController::updateProductById by id  d3a3811b response {"productId":"d3a3811b","productName":"Apple iPhone","productDescription":"iPhone 14 pro max","productAmount":180000,"productType":"Mobiles & Tablets","productSupplierName":"iDestiny","productSupplierCode":"cfd42e9c"}
+""2023-03-01 13:28:54 INFO  - ProductController::updateProductById execution ended.
+""2023-03-01 13:28:54 INFO  - Unregistering application PRODUCT-SERVICE with eureka with status DOWN
+""2023-03-01 13:28:54 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677657534521, current=DOWN, previous=UP]
+""2023-03-01 13:28:54 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 13:28:54 INFO  - Shutting down DiscoveryClient ...
+""2023-03-01 13:28:54 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 13:28:54 INFO  - Unregistering ...
+""2023-03-01 13:28:54 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - deregister  status: 200
+""2023-03-01 13:28:54 INFO  - Completed shut down of DiscoveryClient
+""2023-03-01 13:29:03 INFO  - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json] stacktrace=org.springframework.web.client.RestClientException: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:118)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1132)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1115)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:865)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:406)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:103)
+	... 22 more
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 2] (through reference chain: com.netflix.appinfo.InstanceInfo["timestamp"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1781)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1797)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext._unwrapAndDeserialize(DefaultDeserializationContext.java:348)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:320)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395)
+	... 24 more
+
+""2023-03-01 13:29:03 WARN  - Request execution failed with message: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+""2023-03-01 13:29:03 INFO  - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json] stacktrace=org.springframework.web.client.RestClientException: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:118)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1132)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1115)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:865)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:406)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:103)
+	... 23 more
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 2] (through reference chain: com.netflix.appinfo.InstanceInfo["timestamp"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1781)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1797)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext._unwrapAndDeserialize(DefaultDeserializationContext.java:348)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:320)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395)
+	... 25 more
+
+""2023-03-01 13:29:03 WARN  - Request execution failed with message: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+""2023-03-01 13:29:03 ERROR - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - was unable to send heartbeat!
+"com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+"2023-03-01 13:29:33 INFO  - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json] stacktrace=org.springframework.web.client.RestClientException: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:118)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1132)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1115)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:865)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:406)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:103)
+	... 23 more
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 2] (through reference chain: com.netflix.appinfo.InstanceInfo["timestamp"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1781)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1797)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext._unwrapAndDeserialize(DefaultDeserializationContext.java:348)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:320)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395)
+	... 25 more
+
+""2023-03-01 13:29:33 WARN  - Request execution failed with message: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+""2023-03-01 13:29:33 ERROR - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - was unable to send heartbeat!
+"com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+"2023-03-01 13:30:03 INFO  - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json] stacktrace=org.springframework.web.client.RestClientException: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:118)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1132)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1115)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:865)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:406)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:103)
+	... 23 more
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Root name ('timestamp') does not match expected ('instance') for type `com.netflix.appinfo.InstanceInfo`
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 2] (through reference chain: com.netflix.appinfo.InstanceInfo["timestamp"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1781)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportPropertyInputMismatch(DeserializationContext.java:1797)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext._unwrapAndDeserialize(DefaultDeserializationContext.java:348)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:320)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395)
+	... 25 more
+
+""2023-03-01 13:30:03 WARN  - Request execution failed with message: Error while extracting response for type [class com.netflix.appinfo.InstanceInfo] and content type [application/json]
+""2023-03-01 13:30:03 ERROR - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - was unable to send heartbeat!
+"com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+"2023-03-01 13:30:27 INFO  - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+""2023-03-01 13:30:27 INFO  - Unregistering application PRODUCT-SERVICE with eureka with status DOWN
+""2023-03-01 13:30:28 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677657628000, current=DOWN, previous=UP]
+""2023-03-01 13:30:28 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 13:30:28 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 13:30:28 INFO  - Stopping service [Tomcat]
+""2023-03-01 13:30:28 INFO  - Shutting down DiscoveryClient ...
+""2023-03-01 13:30:31 INFO  - Unregistering ...
+""2023-03-01 13:30:31 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - deregister  status: 200
+""2023-03-01 13:30:31 INFO  - Completed shut down of DiscoveryClient
+""2023-03-01 13:30:31 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 12776 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Service-Registry-Eureka)
+""2023-03-01 13:30:31 INFO  - No active profile set, falling back to 1 default profile: "default"
+""2023-03-01 13:30:31 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2023-03-01 13:30:31 INFO  - Finished Spring Data repository scanning in 13 ms. Found 1 MongoDB repository interfaces.
+""2023-03-01 13:30:31 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
+""2023-03-01 13:30:31 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-03-01 13:30:31 INFO  - Tomcat initialized with port(s): 9001 (http)
+""2023-03-01 13:30:31 INFO  - Starting service [Tomcat]
+""2023-03-01 13:30:31 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
+""2023-03-01 13:30:32 INFO  - Initializing Spring embedded WebApplicationContext
+""2023-03-01 13:30:32 INFO  - Root WebApplicationContext: initialization completed in 663 ms
+""2023-03-01 13:30:32 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@43250381]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+""2023-03-01 13:30:32 INFO  - LiveReload server is running on port 35729
+""2023-03-01 13:30:32 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=9158100}
+""2023-03-01 13:30:32 INFO  - Eureka HTTP Client uses RestTemplate.
+""2023-03-01 13:30:32 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+""2023-03-01 13:30:32 INFO  - Setting initial instance status as: STARTING
+""2023-03-01 13:30:32 INFO  - Initializing Eureka in region us-east-1
+""2023-03-01 13:30:32 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:30:32 INFO  - Disable delta property : false
+""2023-03-01 13:30:32 INFO  - Single vip registry refresh property : null
+""2023-03-01 13:30:32 INFO  - Force full registry fetch : false
+""2023-03-01 13:30:32 INFO  - Application is null : false
+""2023-03-01 13:30:32 INFO  - Registered Applications size is zero : true
+""2023-03-01 13:30:32 INFO  - Application version is -1: true
+""2023-03-01 13:30:32 INFO  - Getting all instance registry info from the eureka server
+""2023-03-01 13:30:32 INFO  - The response status is 200
+""2023-03-01 13:30:32 INFO  - Starting heartbeat executor: renew interval is: 30
+""2023-03-01 13:30:32 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2023-03-01 13:30:32 INFO  - Discovery Client initialized at timestamp 1677657632864 with initial instances count: 2
+""2023-03-01 13:30:32 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
+""2023-03-01 13:30:32 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677657632865, current=UP, previous=STARTING]
+""2023-03-01 13:30:32 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
+""2023-03-01 13:30:32 INFO  - Updating port to 9001
+""2023-03-01 13:30:32 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 13:30:32 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 13:30:33 INFO  - Started ProductMicroserviceApplication in 1.874 seconds (process running for 2412.54)
+""2023-03-01 13:30:33 INFO  - Condition evaluation unchanged
+""2023-03-01 13:30:33 INFO  - Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+""2023-03-01 13:30:33 INFO  - Unregistering application PRODUCT-SERVICE with eureka with status DOWN
+""2023-03-01 13:30:33 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677657633874, current=DOWN, previous=UP]
+""2023-03-01 13:30:33 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 13:30:33 INFO  - Stopping service [Tomcat]
+""2023-03-01 13:30:33 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 13:30:33 INFO  - Shutting down DiscoveryClient ...
+""2023-03-01 13:30:34 INFO  - Starting ProductControllerTest using Java 19.0.1 with PID 9528 (started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Product-Microservice)
+""2023-03-01 13:30:34 INFO  - No active profile set, falling back to 1 default profile: "default"
+""2023-03-01 13:30:35 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-03-01 13:30:36 INFO  - Initializing Spring TestDispatcherServlet ''
+""2023-03-01 13:30:36 INFO  - Initializing Servlet ''
+""2023-03-01 13:30:36 INFO  - Completed initialization in 2 ms
+""2023-03-01 13:30:36 INFO  - Started ProductControllerTest in 2.992 seconds (process running for 4.518)
+""2023-03-01 13:30:36 INFO  - ProductController::getProducts execution started.
+""2023-03-01 13:30:36 INFO  - ProductController::getProducts response {"statusCode":"Success","result":[]}
+""2023-03-01 13:30:36 INFO  - ProductController::getProducts execution ended.
+""2023-03-01 13:30:36 INFO  - Unregistering ...
+""2023-03-01 13:30:36 INFO  - ProductController::getProduct by id  productId
+""2023-03-01 13:30:37 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - deregister  status: 200
+""2023-03-01 13:30:37 INFO  - Completed shut down of DiscoveryClient
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id  productId response {"productId":"productId","productName":"productName","productDescription":"productDescription","productAmount":0.00,"productType":"productType","productSupplierName":"productSupplierName","productSupplierCode":"productSupplierCode","inventory":{"inventoryId":"inventoryId","productId":"productId","quantity":0,"inStock":false}}
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id execution ended.
+""2023-03-01 13:30:37 INFO  - ProductController::getProducts execution started.
+""2023-03-01 13:30:37 INFO  - ProductController::getProducts response {"statusCode":"Success","result":[{"productId":"productId","productName":"productName","productDescription":"productDescription","productAmount":0.00,"productType":"productType","productSupplierName":"productSupplierName","productSupplierCode":"productSupplierCode","inventory":{"inventoryId":"inventoryId","productId":"productId","quantity":0,"inStock":false}}]}
+""2023-03-01 13:30:37 INFO  - ProductController::getProducts execution ended.
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id  productId
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id  productId response []
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id execution ended.
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id  productId
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id  productId response {"productId":"productId","productName":"productName","productDescription":"productDescription","productAmount":0.00,"productType":"productType","productSupplierName":"productSupplierName","productSupplierCode":"productSupplierCode","inventory":{"inventoryId":"inventoryId","productId":"productId","quantity":0,"inStock":false}}
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id execution ended.
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id  productId
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id  productId response [{"productId":"productId","productName":"productName","productDescription":"productDescription","productAmount":0.00,"productType":"productType","productSupplierName":"productSupplierName","productSupplierCode":"productSupplierCode","inventory":{"inventoryId":"inventoryId","productId":"productId","quantity":0,"inStock":false}}]
+""2023-03-01 13:30:37 INFO  - ProductController::getProduct by id execution ended.
+""2023-03-01 13:30:37 INFO  - ProductController::getProductsGroupByType execution started.
+""2023-03-01 13:30:37 INFO  - ProductController::getProductsGroupByType by types  {"statusCode":"Success","result":{"value":[{"productId":"productId","productName":"productName","productDescription":"productDescription","productAmount":0.00,"productType":"productType","productSupplierName":"productSupplierName","productSupplierCode":"productSupplierCode","inventory":{"inventoryId":"inventoryId","productId":"productId","quantity":0,"inStock":false}}]}}
+""2023-03-01 13:30:37 INFO  - ProductController::getProductsGroupByType execution ended.
+""2023-03-01 13:30:37 INFO  - Starting ProductMicroserviceApplication using Java 19.0.1 with PID 12776 (E:\Microservices-projects\Microservices_project\Product-Microservice\target\classes started by RAJA PALAI in E:\Microservices-projects\Microservices_project\Service-Registry-Eureka)
+""2023-03-01 13:30:37 INFO  - No active profile set, falling back to 1 default profile: "default"
+""2023-03-01 13:30:37 INFO  - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2023-03-01 13:30:37 INFO  - Finished Spring Data repository scanning in 7 ms. Found 1 MongoDB repository interfaces.
+""2023-03-01 13:30:38 INFO  - BeanFactory id=517bdbfb-5a9d-3a63-b57e-5ab40a9838ee
+""2023-03-01 13:30:38 INFO  - Bean 'com.productMicroservice.clientConfigServices.ApiClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-03-01 13:30:38 INFO  - Tomcat initialized with port(s): 9001 (http)
+""2023-03-01 13:30:38 INFO  - Starting service [Tomcat]
+""2023-03-01 13:30:38 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.4]
+""2023-03-01 13:30:38 INFO  - Initializing Spring embedded WebApplicationContext
+""2023-03-01 13:30:38 INFO  - Root WebApplicationContext: initialization completed in 428 ms
+""2023-03-01 13:30:38 INFO  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19.0.1+10-21"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@43250381]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+""2023-03-01 13:30:38 INFO  - LiveReload server is running on port 35729
+""2023-03-01 13:30:38 INFO  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47278700}
+""2023-03-01 13:30:38 INFO  - Eureka HTTP Client uses RestTemplate.
+""2023-03-01 13:30:39 WARN  - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+""2023-03-01 13:30:39 INFO  - Setting initial instance status as: STARTING
+""2023-03-01 13:30:39 INFO  - Initializing Eureka in region us-east-1
+""2023-03-01 13:30:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:30:39 INFO  - Disable delta property : false
+""2023-03-01 13:30:39 INFO  - Single vip registry refresh property : null
+""2023-03-01 13:30:39 INFO  - Force full registry fetch : false
+""2023-03-01 13:30:39 INFO  - Application is null : false
+""2023-03-01 13:30:39 INFO  - Registered Applications size is zero : true
+""2023-03-01 13:30:39 INFO  - Application version is -1: true
+""2023-03-01 13:30:39 INFO  - Getting all instance registry info from the eureka server
+""2023-03-01 13:30:39 INFO  - The response status is 200
+""2023-03-01 13:30:39 INFO  - Starting heartbeat executor: renew interval is: 30
+""2023-03-01 13:30:39 INFO  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2023-03-01 13:30:39 INFO  - Discovery Client initialized at timestamp 1677657639545 with initial instances count: 2
+""2023-03-01 13:30:39 INFO  - Registering application PRODUCT-SERVICE with eureka with status UP
+""2023-03-01 13:30:39 INFO  - Saw local status change event StatusChangeEvent [timestamp=1677657639546, current=UP, previous=STARTING]
+""2023-03-01 13:30:39 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001: registering service...
+""2023-03-01 13:30:39 INFO  - DiscoveryClient_PRODUCT-SERVICE/LAPTOP-S7I1GPA2:PRODUCT-SERVICE:9001 - registration status: 204
+""2023-03-01 13:30:39 INFO  - Tomcat started on port(s): 9001 (http) with context path ''
+""2023-03-01 13:30:39 INFO  - Updating port to 9001
+""2023-03-01 13:30:39 INFO  - Started ProductMicroserviceApplication in 2.364 seconds (process running for 2419.239)
+""2023-03-01 13:30:39 INFO  - Condition evaluation unchanged
 "

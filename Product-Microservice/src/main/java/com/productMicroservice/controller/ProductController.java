@@ -6,6 +6,7 @@ import com.productMicroservice.DTO.ProductResponseDTO;
 import com.productMicroservice.exception.ProductResourceNotFoundException;
 import com.productMicroservice.mapperUtil.ProductMapper;
 import com.productMicroservice.service.ProductService;
+import com.productMicroservice.serviceImpl.ProductInterface;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

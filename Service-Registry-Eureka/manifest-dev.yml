@@ -1,0 +1,10 @@
+applications:
+  - name: Service-Registry-Eureka
+    memory: 1G
+    instances: 1
+    path: target/Service-Registry-Eureka-0.0.1-SNAPSHOT.jar
+    buildpacks:
+      - java_buildpack
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
+      JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'

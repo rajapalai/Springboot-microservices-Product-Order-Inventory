@@ -4,16 +4,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.orderMicroservice.DTO.OrderRequestDTO;
 import com.orderMicroservice.DTO.OrderResponseDTO;
 import com.orderMicroservice.model.Order;
-
-import java.util.ArrayList;
+import java.math.BigInteger;
 import java.util.UUID;
 
 public class OrderMapper {
 
+   private static String generateUUIDNo = String.format("%010d",new BigInteger(UUID.randomUUID().toString().replace("-",""),16));
+   private static String randomOrderNumber = generateUUIDNo.substring( generateUUIDNo.length() - 10);
+
     public static Order convertToEntity (OrderRequestDTO orderRequestDTO) {
         Order order = new Order();
         order.setOrderId(UUID.randomUUID().toString().split("-")[4]);
-        order.setOrderNumber(UUID.randomUUID().toString().split("-")[0]);
+        order.setOrderNumber(randomOrderNumber);
         order.setOrderLineItems(orderRequestDTO.getOrderLineItems());
         order.setDeliveryAddress(orderRequestDTO.getDeliveryAddress());
         return order;

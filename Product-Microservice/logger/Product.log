@@ -519,4 +519,28 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Root nam
 ""2023-03-01 13:30:39 INFO  - Updating port to 9001
 ""2023-03-01 13:30:39 INFO  - Started ProductMicroserviceApplication in 2.364 seconds (process running for 2419.239)
 ""2023-03-01 13:30:39 INFO  - Condition evaluation unchanged
+""2023-03-01 13:35:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:40:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:45:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:50:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 13:55:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:00:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:05:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:10:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:15:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:20:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:25:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:30:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:35:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:40:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:45:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:50:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 14:55:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 15:00:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 15:05:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 15:10:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 15:15:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 15:20:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 15:25:39 INFO  - Resolving eureka endpoints via configuration
+""2023-03-01 15:30:39 INFO  - Resolving eureka endpoints via configuration
 "
